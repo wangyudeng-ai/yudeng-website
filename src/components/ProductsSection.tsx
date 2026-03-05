@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink, Code2, ChevronDown, ChevronUp } from 'lucide-react';
 
+import coldlinkImg from '../assets/images/products/coldlink.jpg';
+import userResearchImg from '../assets/images/products/user-research.jpg';
+
 export default function ProductsSection() {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
 
@@ -18,7 +21,7 @@ export default function ProductsSection() {
       shortDescription: "“拒绝监控缺失！我为老爸做了个冷库温度管理 App ⚡️\n这是我用 Vibe coding 模式极速跑通的第一个项目： ColdLink。",
       moreDescription: "针对冷库温度监控缺失的\"老大难\"问题，我把复杂的管理需求浓缩进了一个清爽的看板。\n全库位可视化：肉类、水果、蔬菜，各库温区一眼看穿。\n数据趋势分析：告别小本本，温度波动曲线全自动生成。\n云端实时同步：预警任务自动下发，异常状态秒感知。（还在建设中）\n从代码构建到域名绑定，ColdLink 证明了：场景+产品+AI，PM 一个人也能完成从 0 到 1 的完整上线。",
       url: "https://www.coldlink-app.top/",
-      image: "https://picsum.photos/seed/product1/800/450",
+      image: coldlinkImg,
       tags: ["Google AI studio", "vercel", "Codesandbox", "阿里云", "Gemini"]
     },
     {
@@ -27,7 +30,7 @@ export default function ProductsSection() {
       shortDescription: "旨在将用户研究数据（访谈、问卷、焦点小组）散落在文档、表格及第三方平台导致的信息孤岛问题。通过结构化的项目管理逻辑，实现用户调研资产的沉淀与复用。",
       moreDescription: "",
       url: "https://wangyudeng-ai.github.io/user-research-workbench/",
-      image: "https://picsum.photos/seed/product2/800/450",
+      image: userResearchImg,
       tags: ["Trae", "GitHub", "Gemini", "阿里云"]
     }
   ];
