@@ -46,6 +46,11 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24">
         <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
       </main>
+    <div className="mt-10 text-center text-sm text-gray-500 pb-8">
+        <span id="busuanzi_container_site_pv">
+          本站总访问量 <span id="busuanzi_value_site_pv" className="font-bold text-lime-500"></span> 次
+        </span>
+      </div>
     </div>
   );
 }
