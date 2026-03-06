@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Sparkles, PenTool, Layout, Cpu, Phone, Mail, X } from "lucide-react";
-import avatarImg from "../assets/images/avatar.jpeg";
+import avatarImg from "../assets/images/avatar-optimized.jpg";
 
 export default function HomeSection() {
   const [showContact, setShowContact] = useState(false);
