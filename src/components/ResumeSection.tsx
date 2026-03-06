@@ -155,77 +155,6 @@ export default function ResumeSection() {
       exit={{ opacity: 0, y: -20 }}
       className="space-y-24"
     >
-      <section>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-brand-olive">里程碑</h2>
-          <p className="text-xl text-brand-muted mt-3">
-            主线任务与支线探索的交织
-          </p>
-        </div>
-
-        {/* Center Timeline Container */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Center Line (Hidden on mobile, visible on md+) */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-brand-olive/10 -translate-x-1/2"></div>
-
-          <div className="space-y-16 md:space-y-24">
-            {timelineRows.map((row) => (
-              <div key={row.id} className="relative flex flex-col md:flex-row items-start md:items-center justify-between group">
-                
-                {/* Center Node */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-cream border-4 border-brand-olive rounded-full items-center justify-center z-10 shadow-sm transition-transform duration-300 group-hover:scale-110">
-                  <div className="w-3 h-3 bg-brand-lime rounded-full"></div>
-                </div>
-
-                {/* Mobile Timeline Line */}
-                <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-brand-olive/10"></div>
-                <div className="md:hidden absolute left-[1.125rem] top-6 w-4 h-4 bg-brand-lime rounded-full border-4 border-brand-cream z-10"></div>
-
-                {/* Left Side: Main Quest */}
-                {row.main ? (
-                  <div className="w-full md:w-[45%] pl-14 md:pl-0 md:pr-12 text-left md:text-right mb-8 md:mb-0">
-                    <div className="flex flex-col md:items-end gap-3 mb-4">
-                      <span className="inline-block px-4 py-1.5 bg-brand-olive text-brand-cream rounded-full text-sm font-bold w-max">
-                        {row.main.date}
-                      </span>
-                      <h3 className="text-2xl font-bold text-brand-olive flex items-center md:justify-end gap-2">
-                        <row.main.icon className="w-6 h-6 text-brand-muted order-first md:order-last" />
-                        主线：{row.main.title}
-                      </h3>
-                    </div>
-                    <p className="text-lg text-brand-muted leading-relaxed">
-                      {row.main.description}
-                    </p>
-                  </div>
-                ) : (
-                  <div className="hidden md:block w-[45%]"></div>
-                )}
-
-                {/* Right Side: Side Quest */}
-                {row.side ? (
-                  <div className="w-full md:w-[45%] pl-14 md:pl-12 text-left space-y-6">
-                    {row.side.map((s, idx) => (
-                      <div key={idx} className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm relative overflow-hidden group-hover:shadow-md transition-shadow">
-                        <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-lime"></div>
-                        <h4 className="text-xl font-bold text-brand-olive mb-3 flex items-center gap-2">
-                          <s.icon className="w-5 h-5 text-brand-lime" />
-                          支线：{s.title}
-                        </h4>
-                        <p className="text-brand-muted leading-relaxed">
-                          {s.description}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="hidden md:block w-[45%]"></div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Work Experience Section */}
       <section>
         <div className="text-center mb-12">
@@ -323,6 +252,70 @@ export default function ResumeSection() {
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-brand-olive">里程碑</h2>
+          <p className="text-xl text-brand-muted mt-3">
+            主线任务与支线探索的交织
+          </p>
+        </div>
+
+        <div className="relative max-w-5xl mx-auto">
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-brand-olive/10 -translate-x-1/2"></div>
+
+          <div className="space-y-16 md:space-y-24">
+            {timelineRows.map((row) => (
+              <div key={row.id} className="relative flex flex-col md:flex-row items-start md:items-center justify-between group">
+                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-cream border-4 border-brand-olive rounded-full items-center justify-center z-10 shadow-sm transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-3 h-3 bg-brand-lime rounded-full"></div>
+                </div>
+
+                <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-brand-olive/10"></div>
+                <div className="md:hidden absolute left-[1.125rem] top-6 w-4 h-4 bg-brand-lime rounded-full border-4 border-brand-cream z-10"></div>
+
+                {row.main ? (
+                  <div className="w-full md:w-[45%] pl-14 md:pl-0 md:pr-12 text-left md:text-right mb-8 md:mb-0">
+                    <div className="flex flex-col md:items-end gap-3 mb-4">
+                      <span className="inline-block px-4 py-1.5 bg-brand-olive text-brand-cream rounded-full text-sm font-bold w-max">
+                        {row.main.date}
+                      </span>
+                      <h3 className="text-2xl font-bold text-brand-olive flex items-center md:justify-end gap-2">
+                        <row.main.icon className="w-6 h-6 text-brand-muted order-first md:order-last" />
+                        主线：{row.main.title}
+                      </h3>
+                    </div>
+                    <p className="text-lg text-brand-muted leading-relaxed">
+                      {row.main.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="hidden md:block w-[45%]"></div>
+                )}
+
+                {row.side ? (
+                  <div className="w-full md:w-[45%] pl-14 md:pl-12 text-left space-y-6">
+                    {row.side.map((s, idx) => (
+                      <div key={idx} className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm relative overflow-hidden group-hover:shadow-md transition-shadow">
+                        <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-lime"></div>
+                        <h4 className="text-xl font-bold text-brand-olive mb-3 flex items-center gap-2">
+                          <s.icon className="w-5 h-5 text-brand-lime" />
+                          支线：{s.title}
+                        </h4>
+                        <p className="text-brand-muted leading-relaxed">
+                          {s.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="hidden md:block w-[45%]"></div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
