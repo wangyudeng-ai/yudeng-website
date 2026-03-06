@@ -11,8 +11,8 @@ export default function Navigation({
   const navItems = [
     { id: "home", label: "首页", icon: User },
     { id: "resume", label: "简历", icon: Briefcase },
-    { id: "portfolio", label: "作品", icon: ImageIcon },
     { id: "products", label: "产品", icon: Code2 },
+    { id: "portfolio", label: "作品", icon: ImageIcon },
   ];
 
   return (
