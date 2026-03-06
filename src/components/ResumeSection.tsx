@@ -260,7 +260,7 @@ export default function ResumeSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brand-olive">里程碑</h2>
           <p className="text-xl text-brand-muted mt-3">
-            主线任务与支线探索的交织
+            涵盖大学至今的主要事件
           </p>
         </div>
 
