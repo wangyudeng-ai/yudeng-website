@@ -98,8 +98,8 @@ export default function HomeSection() {
               <span className="text-brand-lime font-bold text-xl">01</span>
               <div>
                 <strong className="block text-xl mb-2">关于AI</strong>
-                <span className="text-white/70 leading-relaxed">
-                  AI是放大器，不是替代品。
+                <span className="text-white/70 leading-relaxed whitespace-normal break-words">
+                  先提效，把时间还给思考；再辨界，知道何时该用、何时不用；终守主观，不把判断交给模型。
                 </span>
               </div>
             </li>
@@ -107,8 +107,8 @@ export default function HomeSection() {
               <span className="text-brand-lime font-bold text-xl">02</span>
               <div>
                 <strong className="block text-xl mb-2">关于方法论</strong>
-                <span className="text-white/70 leading-relaxed">
-                  框架是用来打破的，不是用来束缚的。
+                <span className="text-white/70 leading-relaxed whitespace-normal break-words">
+                  以终为始，先对齐目标与验收；用可验证的SOP推进迭代复盘。
                 </span>
               </div>
             </li>
@@ -116,8 +116,8 @@ export default function HomeSection() {
               <span className="text-brand-lime font-bold text-xl">03</span>
               <div>
                 <strong className="block text-xl mb-2">关于教育</strong>
-                <span className="text-white/70 leading-relaxed">
-                  唤醒比灌输更重要。
+                <span className="text-white/70 leading-relaxed whitespace-normal break-words">
+                  锚定场景，追求'学得会、学得懂、能思辨'；相信好内容与好工具能一起提升学习效果。
                 </span>
               </div>
             </li>
@@ -125,8 +125,8 @@ export default function HomeSection() {
               <span className="text-brand-lime font-bold text-xl">04</span>
               <div>
                 <strong className="block text-xl mb-2">关于性格</strong>
-                <span className="text-white/70 leading-relaxed">
-                  保持敏感，保持钝感。
+                <span className="text-white/70 leading-relaxed whitespace-normal break-words">
+                  靠谱自驱、抗压推进；长期主义与持续好奇。
                 </span>
               </div>
             </li>
