@@ -24,7 +24,7 @@ export default function HomeSection() {
               <div className="relative inline-block mt-2">
                 <div className="absolute bottom-2 sm:bottom-3 left-0 right-0 h-[45%] bg-brand-lime -z-10"></div>
                 <span className="relative z-10 block text-6xl sm:text-7xl lg:text-8xl text-brand-olive tracking-tighter leading-none font-['HeavyDisplay'] whitespace-nowrap">
-                  我是王等等
+                  我是王登登
                 </span>
               </div>
             </div>

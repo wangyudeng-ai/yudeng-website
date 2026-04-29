@@ -35,7 +35,7 @@ export default function App() {
         <div className="w-6 h-6 rounded-full bg-brand-lime flex items-center justify-center">
           <User className="w-3.5 h-3.5 text-brand-olive" />
         </div>
-        <span className="font-bold text-brand-olive text-sm tracking-wide">Elden-王等等的个人主页</span>
+        <span className="font-bold text-brand-olive text-sm tracking-wide">Elden-王登登的个人主页</span>
       </div>
 
       <Navigation
