@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 王登登的个人主页
 
-# Run and deploy your AI Studio app
+一个用于展示个人经历、产品项目与视觉作品的个人网站。
 
-This contains everything you need to run your app locally.
+## 技术栈
 
-View your app in AI Studio: https://ai.studio/apps/f2cac6a8-7db8-429b-b5fc-f8d2802f2f3e
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Motion
+- Lucide React
 
-## Run Locally
+## 页面结构
 
-**Prerequisites:**  Node.js
+- 首页：个人介绍、职业主张、工具能力与联系方式
+- 简历：工作经历、代表项目与成长里程碑
+- 产品：vibe coding 产品项目展示
+- 作品：Midjourney 案例、视觉设计与书法作品
 
+## 本地开发
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+开发服务默认运行在 `http://localhost:3000`。
+
+## 常用命令
+
+```bash
+npm run lint
+npm run build
+npm run preview
+npm run optimize:images
+```
+
+`optimize:images` 会压缩 `src/assets/images` 下的 JPG/JPEG 图片。它不会裁剪或缩放图片，只在压缩后的文件更小时覆盖原图。
+
+## 环境变量
+
+百度统计为可选配置。需要启用时，在 `.env.local` 中设置：
+
+```bash
+VITE_BAIDU_TONGJI_KEY="your-baidu-tongji-key"
+```
+
+不配置该变量时，网站仍可正常运行，只是不加载百度统计脚本。
+
+## 部署
+
+项目可直接部署到 Vercel。推送到 GitHub 主分支后，Vercel 会自动构建并发布。

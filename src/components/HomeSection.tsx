@@ -184,9 +184,9 @@ export default function HomeSection() {
               </div>
               <div className="flex flex-col items-start gap-3">
                 {[
-                  "ChatGPT/Gemini等主流模型",
-                  "Midjourney/lovart等AI绘画类工具",
-                  "Trae/Google AI studio/GitHub等AI编程类工具"
+                  "ChatGPT/Claude/Gemini等主流模型",
+                  "Midjourney/Imagine 2/lovart等AI绘画类工具",
+                  "Claude Code/Codex/Trae/Google AI studio等AI编程类工具"
                 ].map((tool) => (
                   <span
                     key={tool}
