@@ -57,6 +57,7 @@ const mjItems = [
     title: "桉姬珠宝",
     images: [anji1, anji2],
     category: "Ai生成 / 图生图",
+    detailLabel: "项目介绍",
     prompt: "桉姬珠宝作为近年来新兴的宫廷高定珠宝品牌，受邀参加嘉德文创嘉年华。\n项目以其高质量产品图，通过豆包图生图模型生成高质量海报，加以排版，最终落地。"
   },
   {
@@ -410,7 +411,9 @@ export default function PortfolioSection() {
               <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col bg-white h-1/2 md:h-full overflow-y-auto">
                 <h3 className="text-3xl font-bold text-brand-olive mb-6">{selectedMj.title}</h3>
                 <div className="flex-grow flex flex-col">
-                  <span className="text-sm font-bold text-brand-muted uppercase tracking-wider mb-3 block">Prompt</span>
+                  <span className="text-sm font-bold text-brand-muted uppercase tracking-wider mb-3 block">
+                    {(selectedMj as { detailLabel?: string }).detailLabel ?? "Prompt"}
+                  </span>
                   <div className="bg-brand-cream p-6 rounded-2xl border border-gray-100 flex-grow">
                     <p className="font-mono text-sm text-brand-olive leading-relaxed break-words">
                       {selectedMj.prompt}
