@@ -28,7 +28,7 @@ export default function ProductsSection() {
     },
     {
       id: 2,
-      name: "Coldlink",
+      name: "Coldlink（demo）",
       shortDescription: "“拒绝监控缺失！我为老爸做了个冷库温度管理 App ⚡️\n这是我用 Vibe coding 模式极速跑通的第一个项目： ColdLink。",
       moreDescription: "针对冷库温度监控缺失的\"老大难\"问题，我把复杂的管理需求浓缩进了一个清爽的看板。",
       url: "https://www.coldlink-app.top/",
@@ -38,7 +38,7 @@ export default function ProductsSection() {
     },
     {
       id: 3,
-      name: "User Research 用户研究",
+      name: "User Research 用户研究（demo）",
       shortDescription: "旨在将用户研究数据（访谈、问卷、焦点小组）散落在文档、表格及第三方平台导致的信息孤岛问题。通过结构化的项目管理逻辑，实现用户调研资产的沉淀与复用。",
       moreDescription: "",
       url: "https://wangyudeng-ai.github.io/user-research-workbench/",
