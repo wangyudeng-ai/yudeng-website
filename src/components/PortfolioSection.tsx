@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // --- Mock Data ---
+import anji1 from '../assets/images/midjourney/anji1.jpg';
+import anji2 from '../assets/images/midjourney/anji2.jpg';
 import mj1 from '../assets/images/midjourney/mj1.jpg';
 import mj2 from '../assets/images/midjourney/mj2.jpg';
 import mj3 from '../assets/images/midjourney/mj3.jpg';
@@ -51,6 +53,13 @@ import cal4 from '../assets/images/calligraphy/cal4.jpg';
 
 const mjItems = [
   {
+    id: 0,
+    title: "桉姬珠宝",
+    images: [anji1, anji2],
+    category: "Ai生成 / 图生图",
+    prompt: "桉姬珠宝作为近年来新兴的宫廷高定珠宝品牌，受邀参加嘉德文创嘉年华。\n项目以其高质量产品图，通过豆包图生图模型生成高质量海报，加以排版，最终落地。"
+  },
+  {
     id: 1,
     title: "中古珠宝氛围感",
     images: [mj1, mj2, mj3], 
@@ -71,7 +80,7 @@ const mjItems = [
   {
     id: 4,
     title: "RX高定珠宝",
-    images: [mj10, mj11, mj12], 
+    images: [mj10, mj11, mj12, mj17], 
     prompt: "European models wear silver bracelets with rows of small diamond particles. On her hand is a green jade ring encrusted with diamonds. A simple pure white pearl necklace is worn around the neck, and there is a heart-shaped diamond stud earrings on the ear. It looks simple and elegant. They wore black velvet dresses with one hand to the side and head to the side, taking close-ups of their upper bodies in a studio photography setting. Photo taken with the Canon EOS R5 camera.  --ar 9:16 --s 40 --v 7 --seed 1028"
   },
   {
@@ -79,12 +88,6 @@ const mjItems = [
     title: "素茉菲迩项目系列",
     images: [mj13, mj14, mj15, mj16],
     prompt: "A commercial fashion photo featuring a European female model wearing an exquisite gold necklace with fair skin. She wears a Bulgari diamond bracelet on her wrist and a purple diamond ring on her finger. She is dressed in a light-colored top, with her eyes closed, and a purple butterfly near her eye. The background is a clean white with a larger area, shot with a Canon EOS R5 camera and EF lens, aperture 80mm f/2.9, shutter speed 30 seconds, ISO appropriately set, using soft natural light, studio photography style, post-processed to achieve a magazine cover look, high resolution. --ar 9:16 --chaos 10 --s 127 --v 7 --seed 5301"
-  },
-  {
-    id: 6,
-    title: "原创饰品设计师品牌系列",
-    images: [mj17],
-    prompt: "A cold, fair-skinned, long-haired Asian woman with gold and blue pearls on her fingers, an elegant black velvet dress, a gold necklace encrusted with lapis lazuli beads around her neck, and simple pearl earrings. The model is sideways. The background features soft lighting, creating a minimalist yet luxurious atmosphere. In detail, the model has dark hair tied at the back with wavy bangs.    --ar 3:4 --chaos 1 --s 60 --v 6.1 --seed 2"
   }
 ];
 
@@ -255,7 +258,9 @@ export default function PortfolioSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-olive/90 via-brand-olive/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="text-white font-bold text-xl block mb-2">{item.title}</span>
-                  <span className="text-white/80 text-sm">AI 生成 / 视觉探索</span>
+                  <span className="text-white/80 text-sm">
+                    {(item as { category?: string }).category ?? "AI 生成 / 视觉探索"}
+                  </span>
                 </div>
               </div>
             </div>

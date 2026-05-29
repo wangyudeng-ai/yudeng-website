@@ -20,7 +20,7 @@ export default function ProductsSection() {
       id: 1,
       name: "MDive 墨潜",
       shortDescription: "一个以工作区文件夹为核心的本地 Markdown 查看与编辑工具，面向开发者和技术写作者，适合配合 VS Code / Claude Code 作为实时预览器。",
-      moreDescription: "工作区优先：启动选择文件夹，左侧文件树递归展开，多标签页并排查看。\n三档视图：源码 / 分栏 / 预览，覆盖写作、校对、阅读三种场景。\n实时预览：CodeMirror 编辑器 + Markdown 渲染预览，支持左右同步滚动。\n多格式查看：支持 Markdown、图片、PDF 内嵌预览，并支持 Mermaid 图表渲染与 PDF 导出。\n这是我围绕真实 Markdown 写作流做的一款 macOS 本地工具，也是在 AI 编程协作下完成的桌面应用探索。",
+      moreDescription: "工作区优先：启动选择文件夹，左侧文件树递归展开。\n三档视图：源码 / 分栏 / 预览。\n实时预览：CodeMirror 编辑器 + Markdown 渲染预览，支持左右同步滚动。\n多格式查看：支持 Markdown、图片、PDF 内嵌预览，并支持 Mermaid 图表渲染与 PDF 导出。\n这是我围绕真实 Markdown 写作流做的一款 macOS 本地工具，也是在 AI 编程协作下完成的桌面应用探索。",
       url: "https://github.com/wangyudeng-ai/Mdive",
       image: mdiveImg,
       imageClass: "object-contain p-12 bg-brand-cream",
