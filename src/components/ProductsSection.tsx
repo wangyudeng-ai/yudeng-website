@@ -30,7 +30,7 @@ export default function ProductsSection() {
       id: 2,
       name: "Coldlink",
       shortDescription: "“拒绝监控缺失！我为老爸做了个冷库温度管理 App ⚡️\n这是我用 Vibe coding 模式极速跑通的第一个项目： ColdLink。",
-      moreDescription: "针对冷库温度监控缺失的\"老大难\"问题，我把复杂的管理需求浓缩进了一个清爽的看板。\n全库位可视化：肉类、水果、蔬菜，各库温区一眼看穿。\n数据趋势分析：告别小本本，温度波动曲线全自动生成。\n云端实时同步：预警任务自动下发，异常状态秒感知。（还在建设中）\n从代码构建到域名绑定，ColdLink 证明了：场景+产品+AI，PM 一个人也能完成从 0 到 1 的完整上线。",
+      moreDescription: "针对冷库温度监控缺失的\"老大难\"问题，我把复杂的管理需求浓缩进了一个清爽的看板。",
       url: "https://www.coldlink-app.top/",
       image: coldlinkImg,
       imageClass: "object-cover",
