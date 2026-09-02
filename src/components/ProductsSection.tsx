@@ -4,6 +4,7 @@ import { ExternalLink, Code2, ChevronDown, ChevronUp } from 'lucide-react';
 
 import mdiveImg from '../assets/images/products/mdive.png';
 import coldlinkImg from '../assets/images/products/coldlink.jpg';
+import jobMatchAssistantImg from '../assets/images/products/job-match-assistant-preview.svg';
 import userResearchImg from '../assets/images/products/user-research.jpg';
 
 export default function ProductsSection() {
@@ -18,6 +19,16 @@ export default function ProductsSection() {
   const products = [
     {
       id: 1,
+      name: "求职匹配助手（demo）",
+      shortDescription: "一个本地 Chrome 插件 demo：在 Boss 直聘职位页捕捉职位信息，并结合用户简历生成匹配分析。",
+      moreDescription: "支持展示匹配分数、风险点、匹配点和投递建议；可上传文本简历或文本型 PDF，并在设置页查看、编辑结构化简历。",
+      url: "https://github.com/wangyudeng-ai/job-match-assistant-demo",
+      image: jobMatchAssistantImg,
+      imageClass: "object-cover",
+      tags: ["Chrome Extension", "OpenAI API", "Node.js", "Express", "Boss直聘"]
+    },
+    {
+      id: 2,
       name: "MDive 墨潜",
       shortDescription: "一个以工作区文件夹为核心的本地 Markdown 查看与编辑工具，面向开发者和技术写作者，适合配合 VS Code / Claude Code 作为实时预览器。",
       moreDescription: "工作区优先：启动选择文件夹，左侧文件树递归展开。\n三档视图：源码 / 分栏 / 预览。\n实时预览，多格式查看。\n这是我围绕真实 Markdown 写作流做的一款 macOS 本地工具，也是在 AI 编程协作下完成的桌面应用探索。",
@@ -27,7 +38,7 @@ export default function ProductsSection() {
       tags: ["Claude Code", "Codex", "Tauri", "React", "TypeScript"]
     },
     {
-      id: 2,
+      id: 3,
       name: "Coldlink（demo）",
       shortDescription: "“拒绝监控缺失！我为老爸做了个冷库温度管理 App ⚡️\n这是我用 Vibe coding 模式极速跑通的第一个项目： ColdLink。",
       moreDescription: "针对冷库温度监控缺失的\"老大难\"问题，我把复杂的管理需求浓缩进了一个清爽的看板。",
@@ -37,7 +48,7 @@ export default function ProductsSection() {
       tags: ["Google AI studio", "vercel", "Codesandbox", "阿里云", "Gemini"]
     },
     {
-      id: 3,
+      id: 4,
       name: "User Research 用户研究（demo）",
       shortDescription: "旨在将用户研究数据（访谈、问卷、焦点小组）散落在文档、表格及第三方平台导致的信息孤岛问题。通过结构化的项目管理逻辑，实现用户调研资产的沉淀与复用。",
       moreDescription: "",
