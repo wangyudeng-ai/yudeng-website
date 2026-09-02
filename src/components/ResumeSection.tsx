@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Briefcase, GraduationCap, Sparkles, MapPin, Code, PenTool, X, ChevronRight } from "lucide-react";
+import { Briefcase, GraduationCap, Sparkles, MapPin, Code, PenTool, X, ChevronDown, ChevronRight } from "lucide-react";
 
 export default function ResumeSection() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [expandedWorkSection, setExpandedWorkSection] = useState<string | null>("community");
 
   useEffect(() => {
     if (selectedProject !== null) {
@@ -164,40 +165,113 @@ export default function ResumeSection() {
                 2024.03-2026.02
               </span>
             </div>
-            <ul className="space-y-4 text-brand-muted text-lg mb-8">
-              <li className="flex gap-4">
-                <span className="text-brand-lime mt-1 text-xl">✦</span>
-                <div className="leading-relaxed">
-                  <strong className="text-brand-olive">【C端用户运营与产品验证】</strong>
-                  <ul className="mt-3 space-y-2 pl-5 list-disc">
-                    <li><strong className="text-brand-olive">核心用户社群运营与反馈闭环：</strong>将AI功能测试用户沉淀为约200+人的核心私域用户社群，持续运营4个月；通过每周内容分享、答疑、产品试用等方式维护用户关系，社群留存率约90%。</li>
-                    <li><strong className="text-brand-olive">用户调研与需求反馈机制：</strong>定期组织问卷、深度访谈及用户座谈会，收集并沉淀用户需求，持续组织社群用户参与新品调研和功能测试，为后续选题与产品优化提供稳定用户样本。</li>
-                    <li><strong className="text-brand-olive">AI学习功能测试与体验优化：</strong>围绕《基本功》AI教师一对一功能，搭建测试用户群并组织内测、公测；结合现场体验观察、线上问卷及用户反馈，从界面交互、AI教师呈现等维度梳理体验问题，输出《AI功能体验分析报告》，相关建议被研发团队采纳并用于版本优化。</li>
-                  </ul>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-brand-lime mt-1 text-xl">✦</span>
-                <div className="leading-relaxed">
-                  <strong className="text-brand-olive">【用户洞察与内容产品策划】</strong>
-                  <ul className="mt-3 space-y-2 pl-5 list-disc">
-                    <li><strong className="text-brand-olive">用户分层与需求调研：</strong>围绕多项小学语文内容产品，独立设计并执行用户调研，根据多维度要素进行用户分层；通过问卷触达600余名目标用户，完成70余次一对一深度访谈及焦点小组讨论，累计访谈时长50余小时。结合具体学习场景提炼家长与学生需求，为目标用户界定、选题方向及核心卖点设计提供依据。</li>
-                    <li><strong className="text-brand-olive">选题策划与方案落地：</strong>基于用户调研与市场分析，独立完成4个教育内容产品的选题策划，方案覆盖市场与竞品分析、目标用户、内容结构、营销卖点及成本损益测算；推动《3分钟漫画速背小学古诗词》《文学常识不丢分》等产品完成立项并出版。</li>
-                  </ul>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-brand-lime mt-1 text-xl">✦</span>
-                <div className="leading-relaxed">
-                  <strong className="text-brand-olive">【内容产品统筹与项目成果】</strong>
-                  <ul className="mt-3 space-y-2 pl-5 list-disc">
-                    <li><strong className="text-brand-olive">项目成果概览：</strong>任职期间累计负责小学语文12个教辅SKU的内容生产与上市交付，相关产品上市后累计销量超过60万册，累计GMV超过2500万元。</li>
-                    <li><strong className="text-brand-olive">紧周期项目统筹交付与团队协作：</strong>作为《文学常识不丢分》项目第一责任人，负责从正式立项到上市的整体排期与跨部门推进，协同内容、设计、审校、印制及渠道团队，在40个工作日内完成3册约300页内容产品的策划与上市，上市半年全网销量超过5万册。</li>
-                    <li><strong className="text-brand-olive">复杂内容生产与版本管理：</strong>作为《3分钟漫画速背小学古诗词》项目第一责任人，针对漫画体量大、修改轮次多的问题，建立版本编号、进度跟踪和修改记录机制，并引入Claude辅助创作漫画脚本，沉淀标准化生成流程，上市半年全网销量超过16万册。</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {['用户社群运营', '内容产品策划', '项目管理'].map((label) => (
+                <span key={label} className="px-4 py-2 bg-brand-cream rounded-full text-sm font-bold text-brand-olive">
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            <div className="border-y border-gray-100 text-brand-muted text-lg">
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setExpandedWorkSection(expandedWorkSection === "community" ? null : "community")}
+                  aria-expanded={expandedWorkSection === "community"}
+                  aria-controls="work-section-community"
+                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
+                >
+                  <span>
+                    <strong className="block text-brand-olive text-xl">用户社群运营</strong>
+                    <span className="block mt-2 leading-relaxed">沉淀200+核心用户社群，建立调研反馈闭环，并推动AI功能体验优化。</span>
+                  </span>
+                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "community" ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {expandedWorkSection === "community" && (
+                    <motion.div
+                      id="work-section-community"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
+                        <li><strong className="text-brand-olive">核心用户社群运营与反馈闭环：</strong>将AI功能测试用户沉淀为约200+人的核心私域用户社群，持续运营4个月；通过每周内容分享、答疑、产品试用等方式维护用户关系，社群留存率约90%。</li>
+                        <li><strong className="text-brand-olive">用户调研与需求反馈机制：</strong>定期组织问卷、深度访谈及用户座谈会，收集并沉淀用户需求，持续组织社群用户参与新品调研和功能测试，为后续选题与产品优化提供稳定用户样本。</li>
+                        <li><strong className="text-brand-olive">AI学习功能测试与体验优化：</strong>围绕《基本功》AI教师一对一功能，搭建测试用户群并组织内测、公测；结合现场体验观察、线上问卷及用户反馈，从界面交互、AI教师呈现等维度梳理体验问题，输出《AI功能体验分析报告》，相关建议被研发团队采纳并用于版本优化。</li>
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <div className="border-t border-gray-100">
+                <button
+                  type="button"
+                  onClick={() => setExpandedWorkSection(expandedWorkSection === "planning" ? null : "planning")}
+                  aria-expanded={expandedWorkSection === "planning"}
+                  aria-controls="work-section-planning"
+                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
+                >
+                  <span>
+                    <strong className="block text-brand-olive text-xl">内容产品策划</strong>
+                    <span className="block mt-2 leading-relaxed">基于600+用户调研与70+深访，完成4个教育产品的选题与立项。</span>
+                  </span>
+                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "planning" ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {expandedWorkSection === "planning" && (
+                    <motion.div
+                      id="work-section-planning"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
+                        <li><strong className="text-brand-olive">用户分层与需求调研：</strong>围绕多项小学语文内容产品，独立设计并执行用户调研，根据多维度要素进行用户分层；通过问卷触达600余名目标用户，完成70余次一对一深度访谈及焦点小组讨论，累计访谈时长50余小时。结合具体学习场景提炼家长与学生需求，为目标用户界定、选题方向及核心卖点设计提供依据。</li>
+                        <li><strong className="text-brand-olive">选题策划与方案落地：</strong>基于用户调研与市场分析，独立完成4个教育内容产品的选题策划，方案覆盖市场与竞品分析、目标用户、内容结构、营销卖点及成本损益测算；推动《3分钟漫画速背小学古诗词》《文学常识不丢分》等产品完成立项并出版。</li>
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <div className="border-t border-gray-100">
+                <button
+                  type="button"
+                  onClick={() => setExpandedWorkSection(expandedWorkSection === "management" ? null : "management")}
+                  aria-expanded={expandedWorkSection === "management"}
+                  aria-controls="work-section-management"
+                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
+                >
+                  <span>
+                    <strong className="block text-brand-olive text-xl">项目管理</strong>
+                    <span className="block mt-2 leading-relaxed">统筹12个教辅SKU的生产上市，累计销量60万+、GMV 2500万+。</span>
+                  </span>
+                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "management" ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {expandedWorkSection === "management" && (
+                    <motion.div
+                      id="work-section-management"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
+                        <li><strong className="text-brand-olive">项目成果概览：</strong>任职期间累计负责小学语文12个教辅SKU的内容生产与上市交付，相关产品上市后累计销量超过60万册，累计GMV超过2500万元。</li>
+                        <li><strong className="text-brand-olive">紧周期项目统筹交付与团队协作：</strong>作为《文学常识不丢分》项目第一责任人，负责从正式立项到上市的整体排期与跨部门推进，协同内容、设计、审校、印制及渠道团队，在40个工作日内完成3册约300页内容产品的策划与上市，上市半年全网销量超过5万册。</li>
+                        <li><strong className="text-brand-olive">复杂内容生产与版本管理：</strong>作为《3分钟漫画速背小学古诗词》项目第一责任人，针对漫画体量大、修改轮次多的问题，建立版本编号、进度跟踪和修改记录机制，并引入Claude辅助创作漫画脚本，沉淀标准化生成流程，上市半年全网销量超过16万册。</li>
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
 
             <div className="grid sm:grid-cols-1 gap-4">
               {projects.filter(p => p.id === 3).map((project) => (
