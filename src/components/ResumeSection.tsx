@@ -183,7 +183,7 @@ export default function ResumeSection() {
                   className="w-full flex items-start justify-between gap-4 py-5 text-left"
                 >
                   <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime -z-10"></span><span className="relative z-10">【C端用户运营与产品验证】</span></span></strong>
+                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【C端用户运营与产品验证】</span></span></strong>
                     <span className="block mt-2 leading-relaxed">沉淀200+核心用户社群，建立调研反馈闭环，并推动AI功能体验优化。</span>
                   </span>
                   <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "community" ? "rotate-180" : ""}`} />
@@ -216,7 +216,7 @@ export default function ResumeSection() {
                   className="w-full flex items-start justify-between gap-4 py-5 text-left"
                 >
                   <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime -z-10"></span><span className="relative z-10">【用户洞察与内容产品策划】</span></span></strong>
+                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【用户洞察与内容产品策划】</span></span></strong>
                     <span className="block mt-2 leading-relaxed">基于600+用户调研与70+深访，完成4个教育产品的选题与立项。</span>
                   </span>
                   <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "planning" ? "rotate-180" : ""}`} />
@@ -248,7 +248,7 @@ export default function ResumeSection() {
                   className="w-full flex items-start justify-between gap-4 py-5 text-left"
                 >
                   <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime -z-10"></span><span className="relative z-10">【内容产品统筹与项目成果】</span></span></strong>
+                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【内容产品统筹与项目成果】</span></span></strong>
                     <span className="block mt-2 leading-relaxed">统筹12个教辅SKU的生产上市，累计销量60万+、GMV 2500万+。</span>
                   </span>
                   <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "management" ? "rotate-180" : ""}`} />
