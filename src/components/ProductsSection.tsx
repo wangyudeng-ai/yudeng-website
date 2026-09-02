@@ -24,7 +24,7 @@ export default function ProductsSection() {
       moreDescription: "支持展示匹配分数、风险点、匹配点和投递建议；可上传文本简历或文本型 PDF，并在设置页查看、编辑结构化简历。",
       url: "https://github.com/wangyudeng-ai/job-match-assistant-demo",
       image: jobMatchAssistantImg,
-      imageClass: "object-cover",
+      imageClass: "object-contain p-12 bg-brand-cream",
       tags: ["Chrome Extension", "OpenAI API", "Node.js", "Express", "Boss直聘"]
     },
     {

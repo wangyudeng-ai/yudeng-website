@@ -1,41 +1,22 @@
-<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="675" fill="#F4F2EA"/>
-  <rect x="54" y="56" width="1092" height="563" rx="28" fill="#FFF" stroke="#E6E4DB" stroke-width="3"/>
-  <rect x="54" y="56" width="1092" height="54" rx="28" fill="#2C3B2C"/>
-  <path d="M54 83C54 68.0883 66.0883 56 81 56H1119C1133.91 56 1146 68.0883 1146 83V110H54V83Z" fill="#2C3B2C"/>
-  <circle cx="88" cy="83" r="7" fill="#C9E62C"/>
-  <circle cx="112" cy="83" r="7" fill="#DCE4A3"/>
-  <circle cx="136" cy="83" r="7" fill="#F4F2EA"/>
-  <rect x="82" y="143" width="560" height="42" rx="10" fill="#F4F2EA"/>
-  <rect x="82" y="209" width="436" height="24" rx="8" fill="#2C3B2C"/>
-  <rect x="82" y="250" width="520" height="12" rx="6" fill="#DCDDD4"/>
-  <rect x="82" y="277" width="472" height="12" rx="6" fill="#E9E8E1"/>
-  <rect x="82" y="304" width="498" height="12" rx="6" fill="#E9E8E1"/>
-  <rect x="82" y="355" width="210" height="24" rx="8" fill="#2C3B2C"/>
-  <rect x="82" y="396" width="535" height="12" rx="6" fill="#E9E8E1"/>
-  <rect x="82" y="423" width="482" height="12" rx="6" fill="#E9E8E1"/>
-  <rect x="82" y="450" width="508" height="12" rx="6" fill="#E9E8E1"/>
-  <rect x="82" y="518" width="156" height="42" rx="21" fill="#C9E62C"/>
-  <text x="111" y="546" fill="#2C3B2C" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">职位详情</text>
-  <rect x="688" y="132" width="412" height="452" rx="22" fill="#2C3B2C"/>
-  <rect x="714" y="158" width="360" height="52" rx="14" fill="#FFFFFF" fill-opacity="0.12"/>
-  <circle cx="742" cy="184" r="13" fill="#C9E62C"/>
-  <path d="M736 184L740 188L748 179" stroke="#2C3B2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="767" y="181" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="17" font-weight="700">求职匹配助手</text>
-  <text x="767" y="201" fill="#D8DECC" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">AI 职位匹配分析</text>
-  <text x="714" y="250" fill="#D8DECC" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="14">匹配度</text>
-  <text x="714" y="323" fill="#C9E62C" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="70" font-weight="700">86</text>
-  <text x="809" y="323" fill="#C9E62C" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="700">%</text>
-  <rect x="714" y="346" width="336" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
-  <rect x="714" y="346" width="289" height="8" rx="4" fill="#C9E62C"/>
-  <text x="714" y="397" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">匹配亮点</text>
-  <rect x="714" y="418" width="95" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.14"/>
-  <text x="736" y="438" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">用户研究</text>
-  <rect x="820" y="418" width="95" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.14"/>
-  <text x="842" y="438" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">产品策划</text>
-  <rect x="926" y="418" width="94" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.14"/>
-  <text x="946" y="438" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">AI 应用</text>
-  <rect x="714" y="477" width="336" height="80" rx="14" fill="#FFFFFF" fill-opacity="0.08"/>
-  <text x="734" y="506" fill="#C9E62C" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700">投递建议</text>
-  <text x="734" y="532" fill="#FFFFFF" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">突出用户研究与 AI 产品落地经验</text>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="21" y="27" width="470" height="470" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#2C3B2C" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="surface" x1="83" y1="66" x2="436" y2="452" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F4F2EA"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="67" y="55" width="378" height="378" rx="82" fill="url(#surface)"/>
+    <rect x="68" y="56" width="376" height="376" rx="81" stroke="#E2E2D8" stroke-width="2"/>
+  </g>
+  <path d="M177 150C177 138.954 185.954 130 197 130H284L335 181V343C335 354.046 326.046 363 315 363H197C185.954 363 177 354.046 177 343V150Z" fill="#2C3B2C"/>
+  <path d="M284 130V164C284 173.389 291.611 181 301 181H335" fill="#C9E62C"/>
+  <rect x="210" y="215" width="92" height="13" rx="6.5" fill="#F4F2EA"/>
+  <rect x="210" y="247" width="72" height="13" rx="6.5" fill="#D6DACB"/>
+  <rect x="210" y="279" width="92" height="13" rx="6.5" fill="#D6DACB"/>
+  <circle cx="337" cy="330" r="55" fill="#C9E62C" stroke="#FFFFFF" stroke-width="12"/>
+  <path d="M310 330L329 349L366 311" stroke="#2C3B2C" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
