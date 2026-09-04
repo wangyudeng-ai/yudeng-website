@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Briefcase, GraduationCap, Sparkles, MapPin, Code, PenTool, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Briefcase, GraduationCap, Sparkles, MapPin, Code, PenTool, X, ChevronRight } from "lucide-react";
 
 export default function ResumeSection() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [expandedWorkSection, setExpandedWorkSection] = useState<string | null>("community");
 
   useEffect(() => {
     if (selectedProject !== null) {
@@ -80,9 +79,19 @@ export default function ResumeSection() {
 
   const timelineRows = [
     {
+      id: 1,
+      main: {
+        date: '2025.1 - 2026.2',
+        title: '小思AI教育产品经理',
+        description: '在小思AI担任产品经理一职，完成AI在教育场景下功能的落地，推动业务增长。',
+        icon: Briefcase
+      },
+      side: null
+    },
+    {
       id: 2,
       main: {
-        date: '2024.03-2026.02',
+        date: '2024.3 - 2025.1',
         title: '学而思图书-内容产品管培生',
         description: '校招进入学而思图书，负责产品策划与内容生产环节，职业观逐步形成。',
         icon: Briefcase
@@ -152,6 +161,49 @@ export default function ResumeSection() {
           <h2 className="text-4xl font-bold text-brand-olive">工作经历</h2>
         </div>
         <div className="max-w-4xl mx-auto space-y-6">
+          <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
+              <div>
+                <h3 className="text-3xl font-bold text-brand-olive">
+                  北京学而思教育科技有限公司
+                </h3>
+                <p className="text-xl text-brand-muted mt-2">产品经理（小思AI）</p>
+              </div>
+              <span className="px-5 py-2.5 bg-brand-cream rounded-full text-sm font-bold text-brand-olive">
+                2025.1 - 2026.2
+              </span>
+            </div>
+            <ul className="space-y-4 text-brand-muted text-lg mb-8">
+              <li className="flex gap-4">
+                <span className="text-brand-lime mt-1 text-xl">✦</span>
+                <span className="leading-relaxed">
+                  负责核心功能拍照批改的搭建，冷启动后2个月，日活峰值达8w。
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-brand-lime mt-1 text-xl">✦</span>
+                <span className="leading-relaxed">
+                  负责AI讲题功能探索与数学讲题模版的搭建，推进“模板+数据标注+模型微调”的垂直优化，并建立多维评测指标。
+                </span>
+              </li>
+            </ul>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {projects.filter(p => p.id === 1 || p.id === 2).map((project) => (
+                <button
+                  key={project.id}
+                  onClick={() => setSelectedProject(project.id)}
+                  className="flex items-center justify-between p-5 rounded-2xl bg-brand-cream border border-gray-100 hover:border-brand-lime hover:bg-brand-lime/10 transition-colors group text-left"
+                >
+                  <span className="font-bold text-brand-olive group-hover:text-brand-lime-hover transition-colors">
+                    {project.title}
+                  </span>
+                  <ChevronRight className="w-5 h-5 text-brand-muted group-hover:text-brand-lime-hover transition-colors shrink-0" />
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Second Company Role */}
           <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
@@ -162,116 +214,29 @@ export default function ResumeSection() {
                 <p className="text-xl text-brand-muted mt-2">内容产品管培生（学而思图书）</p>
               </div>
               <span className="px-5 py-2.5 bg-brand-cream rounded-full text-sm font-bold text-brand-olive">
-                2024.03-2026.02
+                2024.3 - 2025.1
               </span>
             </div>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['用户社群运营', '内容产品策划', '项目管理'].map((label) => (
-                <span key={label} className="px-4 py-2 bg-brand-cream rounded-full text-sm font-bold text-brand-olive">
-                  {label}
+            <ul className="space-y-4 text-brand-muted text-lg mb-8">
+              <li className="flex gap-4">
+                <span className="text-brand-lime mt-1 text-xl">✦</span>
+                <span className="leading-relaxed">
+                  <strong className="text-brand-olive">【新品策划/PMF验证】</strong>围绕用户痛点搭建“定性+定量”验证体系；完成60+次访谈（40+小时），触达400+目标用户，输出需求洞察/竞品分析/立项方案，支撑新品选题与立项决策。
                 </span>
-              ))}
-            </div>
-
-            <div className="border-y border-gray-100 text-brand-muted text-lg">
-              <div>
-                <button
-                  type="button"
-                  onClick={() => setExpandedWorkSection(expandedWorkSection === "community" ? null : "community")}
-                  aria-expanded={expandedWorkSection === "community"}
-                  aria-controls="work-section-community"
-                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
-                >
-                  <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【C端用户运营与产品验证】</span></span></strong>
-                    <span className="block mt-2 leading-relaxed">沉淀200+核心用户社群，建立调研反馈闭环，并推动AI功能体验优化。</span>
-                  </span>
-                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "community" ? "rotate-180" : ""}`} />
-                </button>
-                <AnimatePresence initial={false}>
-                  {expandedWorkSection === "community" && (
-                    <motion.div
-                      id="work-section-community"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
-                    >
-                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
-                        <li><strong className="text-brand-olive">核心用户社群运营与反馈闭环：</strong>将AI功能测试用户沉淀为约200+人的核心私域用户社群，持续运营4个月；通过每周内容分享、答疑、产品试用等方式维护用户关系，社群留存率约90%。</li>
-                        <li><strong className="text-brand-olive">用户调研与需求反馈机制：</strong>定期组织问卷、深度访谈及用户座谈会，收集并沉淀用户需求，持续组织社群用户参与新品调研和功能测试，为后续选题与产品优化提供稳定用户样本。</li>
-                        <li><strong className="text-brand-olive">AI学习功能测试与体验优化：</strong>围绕《基本功》AI教师一对一功能，搭建测试用户群并组织内测、公测；结合现场体验观察、线上问卷及用户反馈，从界面交互、AI教师呈现等维度梳理体验问题，输出《AI功能体验分析报告》，相关建议被研发团队采纳并用于版本优化。</li>
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              <div className="border-t border-gray-100">
-                <button
-                  type="button"
-                  onClick={() => setExpandedWorkSection(expandedWorkSection === "planning" ? null : "planning")}
-                  aria-expanded={expandedWorkSection === "planning"}
-                  aria-controls="work-section-planning"
-                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
-                >
-                  <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【用户洞察与内容产品策划】</span></span></strong>
-                    <span className="block mt-2 leading-relaxed">基于600+用户调研与70+深访，完成4个教育产品的选题与立项。</span>
-                  </span>
-                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "planning" ? "rotate-180" : ""}`} />
-                </button>
-                <AnimatePresence initial={false}>
-                  {expandedWorkSection === "planning" && (
-                    <motion.div
-                      id="work-section-planning"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
-                    >
-                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
-                        <li><strong className="text-brand-olive">用户分层与需求调研：</strong>围绕多项小学语文内容产品，独立设计并执行用户调研，根据多维度要素进行用户分层；通过问卷触达600余名目标用户，完成70余次一对一深度访谈及焦点小组讨论，累计访谈时长50余小时。结合具体学习场景提炼家长与学生需求，为目标用户界定、选题方向及核心卖点设计提供依据。</li>
-                        <li><strong className="text-brand-olive">选题策划与方案落地：</strong>基于用户调研与市场分析，独立完成4个教育内容产品的选题策划，方案覆盖市场与竞品分析、目标用户、内容结构、营销卖点及成本损益测算；推动《3分钟漫画速背小学古诗词》《文学常识不丢分》等产品完成立项并出版。</li>
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              <div className="border-t border-gray-100">
-                <button
-                  type="button"
-                  onClick={() => setExpandedWorkSection(expandedWorkSection === "management" ? null : "management")}
-                  aria-expanded={expandedWorkSection === "management"}
-                  aria-controls="work-section-management"
-                  className="w-full flex items-start justify-between gap-4 py-5 text-left"
-                >
-                  <span>
-                    <strong className="block text-brand-olive text-xl"><span className="relative inline-block isolate"><span className="absolute bottom-0.5 left-0 right-0 h-2 bg-brand-lime z-0"></span><span className="relative z-10">【内容产品统筹与项目成果】</span></span></strong>
-                    <span className="block mt-2 leading-relaxed">统筹12个教辅SKU的生产上市，累计销量60万+、GMV 2500万+。</span>
-                  </span>
-                  <ChevronDown className={`w-6 h-6 text-brand-lime shrink-0 mt-1 transition-transform ${expandedWorkSection === "management" ? "rotate-180" : ""}`} />
-                </button>
-                <AnimatePresence initial={false}>
-                  {expandedWorkSection === "management" && (
-                    <motion.div
-                      id="work-section-management"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
-                    >
-                      <ul className="pb-6 pl-5 space-y-3 list-disc leading-relaxed">
-                        <li><strong className="text-brand-olive">项目成果概览：</strong>任职期间累计负责小学语文12个教辅SKU的内容生产与上市交付，相关产品上市后累计销量超过60万册，累计GMV超过2500万元。</li>
-                        <li><strong className="text-brand-olive">紧周期项目统筹交付与团队协作：</strong>作为《文学常识不丢分》项目第一责任人，负责从正式立项到上市的整体排期与跨部门推进，协同内容、设计、审校、印制及渠道团队，在40个工作日内完成3册约300页内容产品的策划与上市，上市半年全网销量超过5万册。</li>
-                        <li><strong className="text-brand-olive">复杂内容生产与版本管理：</strong>作为《3分钟漫画速背小学古诗词》项目第一责任人，针对漫画体量大、修改轮次多的问题，建立版本编号、进度跟踪和修改记录机制，并引入Claude辅助创作漫画脚本，沉淀标准化生成流程，上市半年全网销量超过16万册。</li>
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-brand-lime mt-1 text-xl">✦</span>
+                <span className="leading-relaxed">
+                  <strong className="text-brand-olive">【高价值用户运营】</strong>多轮招募沉淀一二线城市“精致妈妈”私域社群，建立用户调研SOP与样本库，为选题与内容迭代提供持续输入。
+                </span>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-brand-lime mt-1 text-xl">✦</span>
+                <span className="leading-relaxed">
+                  <strong className="text-brand-olive">【内容生产与商业结果】</strong>负责12册图书内容生产与上线管理，累计销量72万+，累计GMV 3200万+。
+                </span>
+              </li>
+            </ul>
 
             <div className="grid sm:grid-cols-1 gap-4">
               {projects.filter(p => p.id === 3).map((project) => (
