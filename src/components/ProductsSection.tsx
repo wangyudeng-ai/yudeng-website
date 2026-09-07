@@ -6,6 +6,7 @@ import mdiveImg from '../assets/images/products/mdive.png';
 import coldlinkImg from '../assets/images/products/coldlink.jpg';
 import jobMatchAssistantImg from '../assets/images/products/job-match-assistant-preview.svg';
 import userResearchImg from '../assets/images/products/user-research.jpg';
+import rideAiAnalyzerImg from '../assets/images/products/ride-ai-analyzer.svg';
 
 export default function ProductsSection() {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
@@ -17,6 +18,17 @@ export default function ProductsSection() {
   };
 
   const products = [
+    {
+      id: 5,
+      name: "Ride AI Analyzer",
+      shortDescription: "把骑行数据转成可解释的训练复盘与下一步建议。",
+      moreDescription: "",
+      url: "https://my.feishu.cn/docx/MVDadt6Gmoc1IXx5liFc66Daned?from=from_copylink",
+      buttonLabel: "查看项目说明 ↗",
+      image: rideAiAnalyzerImg,
+      imageClass: "object-cover",
+      tags: ["Python", "FastAPI", "FIT", "数据分析", "Vibe Coding"]
+    },
     {
       id: 1,
       name: "求职匹配助手（demo）",
@@ -145,7 +157,7 @@ export default function ProductsSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-brand-olive text-brand-cream rounded-full font-bold hover:bg-brand-olive-light transition-colors group/btn mt-auto"
                   >
-                    访问网页
+                    {product.buttonLabel ?? "访问网页"}
                     <ExternalLink className="w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                   </a>
                 </div>

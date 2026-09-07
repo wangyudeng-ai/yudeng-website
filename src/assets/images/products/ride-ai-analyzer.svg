@@ -1,0 +1,18 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#F8F4EA"/>
+  <circle cx="984" cy="104" r="220" fill="#DDE7CF"/>
+  <path d="M-54 566C178 458 316 585 474 498C635 409 765 451 910 355C1033 273 1115 267 1258 282" stroke="#6C7A52" stroke-width="16" stroke-linecap="round"/>
+  <path d="M-54 566C178 458 316 585 474 498C635 409 765 451 910 355C1033 273 1115 267 1258 282" stroke="#9AAB7B" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 16"/>
+  <g transform="translate(160 280)" stroke="#354322" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="83" cy="164" r="72"/>
+    <circle cx="317" cy="164" r="72"/>
+    <path d="M83 164L152 49H241L317 164M152 49L207 164H83M207 164L241 49M136 49H180M123 29H183M241 49L278 26"/>
+  </g>
+  <rect x="674" y="166" width="330" height="250" rx="24" fill="white" stroke="#E4E0D5" stroke-width="3"/>
+  <path d="M714 353L758 319L800 332L844 263L888 287L932 219L964 244" stroke="#6C7A52" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="932" cy="219" r="10" fill="#D46C42"/>
+  <text x="714" y="218" fill="#354322" font-family="Arial, sans-serif" font-size="26" font-weight="700">RIDE ANALYSIS</text>
+  <text x="714" y="257" fill="#80856F" font-family="Arial, sans-serif" font-size="18">FIT · TRAINING · INSIGHTS</text>
+  <text x="84" y="108" fill="#354322" font-family="Arial, sans-serif" font-size="34" font-weight="700">Ride AI Analyzer</text>
+  <text x="84" y="150" fill="#687058" font-family="Arial, sans-serif" font-size="22">Turn every ride into your next move.</text>
+</svg>
