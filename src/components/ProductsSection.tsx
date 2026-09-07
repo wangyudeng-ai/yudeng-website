@@ -21,7 +21,7 @@ export default function ProductsSection() {
     {
       id: 5,
       name: "Ride AI Analyzer",
-      shortDescription: "把骑行数据转成可解释的训练复盘与下一步建议。",
+      shortDescription: "Ride AI Analyzer 是一个面向个人骑手的骑行表现分析原型：它不止展示数据，而是把一次骑行变成有证据、能理解的训练决策。\n\n骑行平台已经能记录功率、心率等大量数据，但用户完成一次训练后，通常仍然回答不了三个问题：\n\n1. 我这次练到了什么？\n2. 问题或代价在哪里？\n3. 下一步该练、该恢复，还是先继续观察？\n\n所以这个项目解决的不是“缺少数据”，而是“数据很多，但训练决策仍然困难”。",
       moreDescription: "",
       url: "https://my.feishu.cn/docx/MVDadt6Gmoc1IXx5liFc66Daned?from=from_copylink",
       buttonLabel: "查看项目说明 ↗",
